@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
       /*  dbInitialize.addIdeaTabs();
         dbInitialize.addTabContentsData();*/
 
-        //database
+
         databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
