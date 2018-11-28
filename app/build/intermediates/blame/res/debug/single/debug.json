@@ -288,6 +288,10 @@
         "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cbf31ad60ed0770f7c960dbce56b7994\\res\\anim\\design_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\layout_tab_list_with_talktime_layout.xml.flat",
+        "source": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\src\\main\\res\\layout\\tab_list_with_talktime_layout.xml"
+    },
+    {
         "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_fade_out.xml.flat",
         "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1e58fb281fb39f0018ac291242132103\\res\\anim\\abc_fade_out.xml"
     },
@@ -370,10 +374,6 @@
     {
         "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
         "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1e58fb281fb39f0018ac291242132103\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_tabdetails_layout.xml.flat",
-        "source": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\src\\main\\res\\layout\\fragment_tabdetails_layout.xml"
     },
     {
         "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -1862,6 +1862,10 @@
     {
         "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\1e58fb281fb39f0018ac291242132103\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\layout_tab_list_without_talktime_layout.xml.flat",
+        "source": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\src\\main\\res\\layout\\tab_list_without_talktime_layout.xml"
     },
     {
         "merged": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_menu_search.png.flat",

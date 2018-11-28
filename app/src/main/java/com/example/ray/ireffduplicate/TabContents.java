@@ -12,8 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.ray.ireffduplicate.Adapter.RecyclerViewAdapter;
-import com.example.ray.ireffduplicate.Database.DatabaseConstants;
+import com.example.ray.ireffduplicate.Adapter.RecyclerViewAdapter_WithTalktime;
+import com.example.ray.ireffduplicate.Adapter.RecyclerViewAdapter_WithoutTalktime;
 import com.example.ray.ireffduplicate.Database.PackDetailsVariables;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,7 +26,8 @@ import java.util.List;
 
 public class TabContents extends Fragment {
 
-    private RecyclerViewAdapter recyclerAdapter;
+    private RecyclerViewAdapter_WithTalktime recyclerAdapterWithTalktime;
+    private RecyclerViewAdapter_WithoutTalktime recyclerAdapterWithoutTalktime;
     private RecyclerView recyclerView;
     private String currentTab;
     private SharedPreferenceConfig preferenceConfig;
@@ -41,14 +42,14 @@ public class TabContents extends Fragment {
         preferenceConfig = new SharedPreferenceConfig(getContext());
         Bundle bundle = getArguments();
         currentTab = bundle.getString("currentTab");
-        Log.d("nowTab", "onCreateView: "+currentTab);
+        Log.d("nowTab", "onCreateView: " + currentTab);
         recyclerView = view.findViewById(R.id.recyclerContainer);
-        Log.d("currNet", "onCreateView: "+preferenceConfig.getCurrentNetwork());
+        Log.d("currNet", "onCreateView: " + preferenceConfig.getCurrentNetwork());
         databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
+                String talktime = null;
                 DataSnapshot ds = dataSnapshot.child(currentTab);
                 for (DataSnapshot each : ds.getChildren()) {
                     PackDetailsVariables pkVariables = new PackDetailsVariables();
@@ -57,13 +58,19 @@ public class TabContents extends Fragment {
                     pkVariables.setValidity(each.getValue(PackDetailsVariables.class).getValidity());
                     pkVariables.setMessage(each.getValue(PackDetailsVariables.class).getMessage());
                     tabContentList.add(pkVariables);
-                    Log.d("nowdetails", "onDataChange: "+tabContentList);
+                    talktime = pkVariables.getTalktime();
+                    Log.d("nowdetails", "onDataChange: " + pkVariables.getTalktime());
                 }
                 layoutManager = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(layoutManager);
                 recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-                recyclerAdapter = new RecyclerViewAdapter(tabContentList);
-                recyclerView.setAdapter(recyclerAdapter);
+                if (talktime!=null && !talktime.equals("")) {
+                    recyclerAdapterWithTalktime = new RecyclerViewAdapter_WithTalktime(tabContentList);
+                    recyclerView.setAdapter(recyclerAdapterWithTalktime);
+                } else {
+                    recyclerAdapterWithoutTalktime = new RecyclerViewAdapter_WithoutTalktime(tabContentList);
+                    recyclerView.setAdapter(recyclerAdapterWithoutTalktime);
+                }
                 recyclerView.setHasFixedSize(true);
             }
 

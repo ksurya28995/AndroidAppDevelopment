@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Database Initializtion
-        DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
-      /*  dbInitialize.addIdeaTabs();
+        /*DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
+        dbInitialize.addIdeaTabs();
         dbInitialize.addTabContentsData();*/
 
 

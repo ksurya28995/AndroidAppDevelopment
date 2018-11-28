@@ -1130,7 +1130,6 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_network_type_list
 layout fragment_tab_view_page
-layout fragment_tabdetails_layout
 layout fragment_toolbar
 layout notification_action
 layout notification_action_tombstone
@@ -1151,6 +1150,8 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout tab_list_with_talktime_layout
+layout tab_list_without_talktime_layout
 layout tablist_layout
 mipmap ic_launcher
 mipmap ic_launcher_round
