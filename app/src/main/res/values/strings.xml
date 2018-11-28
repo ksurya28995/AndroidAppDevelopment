@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IreffDuplicate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="networkPreference">com.example.ray.ireffduplicate.networkPreference</string>
+    <string name="currentNetworkPreference">com.example.ray.ireffduplicate.currentNetworkPreference</string>
+</resources>

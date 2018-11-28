@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ideaTabList">
+        <item>Home</item>
+        <item>Topup</item>
+        <item>2G</item>
+        <item>3G</item>
+        <item>4G</item>
+        <item>Local</item>
+        <item>STD</item>
+        <item>SMS</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="ideaTopupOffers">
+        <item>10</item>
+        <item>35</item>
+        <item>65</item>
+        <item>95</item>
+        <item>145</item>
+        <item>245</item>
+        <item>1000</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="ideaNetOffers">
+        <item>2G</item>
+        <item>3G</item>
+        <item>4G</item>
+    </string-array>
+</resources>
