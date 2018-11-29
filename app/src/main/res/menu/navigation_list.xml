@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dthPlans"
+        android:icon="@drawable/ic_dth_plans"
+        android:title="DTH Plans" />
+    <item
+        android:id="@+id/myRecharges"
+        android:icon="@drawable/ic_my_recharges"
+        android:title="My Recharges" />
+    <item
+        android:id="@+id/ussdCodes"
+        android:icon="@drawable/ic_ussd_codes"
+        android:title="USSD codes" />
+</menu>

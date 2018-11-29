@@ -842,12 +842,17 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_about_us
+drawable ic_dth_plans
+drawable ic_help
 drawable ic_ireff_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_main_menu
 drawable ic_menu_search
+drawable ic_my_recharges
 drawable ic_network_expand
+drawable ic_ussd_codes
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -934,6 +939,7 @@ id direct
 id disableHome
 id drawer
 id drawerButton
+id dthPlans
 id edit_query
 id end
 id end_padder
@@ -976,6 +982,7 @@ id message
 id middle
 id mini
 id multiply
+id myRecharges
 id navigationView
 id navigation_header_container
 id networkName
@@ -1062,7 +1069,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toolbar
-id toolbarContainer
 id top
 id topPanel
 id touch_outside
@@ -1075,6 +1081,7 @@ id typelist
 id uniform
 id up
 id useLogo
+id ussdCodes
 id validity
 id viewPager
 id view_offset_helper
@@ -1139,7 +1146,6 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_network_type_list
 layout fragment_tab_view_page
-layout fragment_toolbar
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1162,6 +1168,7 @@ layout support_simple_spinner_dropdown_item
 layout tab_list_with_talktime_layout
 layout tab_list_without_talktime_layout
 layout tablist_layout
+menu navigation_list
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.ray.ifduplicate.Database.DatabaseMethods;
 import com.example.ray.ifduplicate.Database.initializeDB.DatabaseInitialization;
@@ -21,30 +22,31 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     private FragmentManager fragmentManager;
     private List<String> tabsList = new ArrayList<>();
     private DatabaseReference databaseReference;
     private SharedPreferenceConfig preferenceConfig;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private ImageButton drawerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
-        //toolbar inflation
-        fragmentManager = getSupportFragmentManager();
-        if (findViewById(R.id.toolbarContainer) != null) {
-            fragmentManager.beginTransaction().add(R.id.toolbarContainer, new CustomToolbar(), "toolbar").commit();
-        }
-
         //Database Initializtion
         /*DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
         dbInitialize.addIdeaTabs();
         dbInitialize.addTabContentsData();*/
+        preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
+        drawerLayout = findViewById(R.id.drawer);
+        navigationView = findViewById(R.id.navigationView);
+        drawerButton = findViewById(R.id.drawerButton);
+        fragmentManager = getSupportFragmentManager();
 
+        drawerButton.setOnClickListener(this);
 
         databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -67,5 +69,12 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.drawerButton:
+                drawerLayout.openDrawer(GravityCompat.START);
+        }
+    }
 }
 
