@@ -23,14 +23,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.ray.ireffduplicate.MainActivity" >
+        <activity android:name="com.example.ray.ifduplicate.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ray.ireffduplicate.HomeActivity" />
+        <activity android:name="com.example.ray.ifduplicate.HomeActivity" />
         <!--
              FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

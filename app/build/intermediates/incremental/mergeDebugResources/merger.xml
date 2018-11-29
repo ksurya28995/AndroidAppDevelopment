@@ -1955,7 +1955,7 @@
         <item>2G</item>
         <item>3G</item>
         <item>4G</item>
-    </string-array></file><file path="C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">IreffDuplicate</string><string name="hello_blank_fragment">Hello blank fragment</string><string name="networkPreference">com.example.ray.ireffduplicate.networkPreference</string><string name="currentNetworkPreference">com.example.ray.ireffduplicate.currentNetworkPreference</string></file><file path="C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </string-array></file><file path="C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">IfSurya</string><string name="hello_blank_fragment">Hello blank fragment</string><string name="networkPreference">com.example.ray.ifduplicate.networkPreference</string><string name="currentNetworkPreference">com.example.ray.ifduplicate.currentNetworkPreference</string></file><file path="C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
