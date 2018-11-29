@@ -1,4 +1,4 @@
-com.example.ray.ireffduplicate
+com.example.ray.ifduplicate
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -932,6 +932,8 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id drawer
+id drawerButton
 id edit_query
 id end
 id end_padder
@@ -974,6 +976,7 @@ id message
 id middle
 id mini
 id multiply
+id navigationView
 id navigation_header_container
 id networkName
 id networkTypeList

@@ -1,9 +1,19 @@
 package com.example.ray.ifduplicate.Database.initializeDB;
 
 import android.content.Context;
+import android.util.Log;
 
+import com.example.ray.ifduplicate.Database.DatabaseConstants;
+import com.example.ray.ifduplicate.Database.DatabaseMethods;
+import com.example.ray.ifduplicate.Database.PackDetailsVariables;
 import com.example.ray.ifduplicate.SharedPreferenceConfig;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DatabaseInitialization {
 
@@ -13,9 +23,8 @@ public class DatabaseInitialization {
     public DatabaseInitialization(Context context) {
         preferenceConfig = new SharedPreferenceConfig(context);
     }
-/*
 
-    public void addTabContentsData() {
+  /*  public void addTabContentsData() {
         addIdeaTopupPacksContents();
         addIdea2gPacksContents();
         addIdea4gPacksContents();
@@ -23,9 +32,9 @@ public class DatabaseInitialization {
         addIdeaStdPacksContents();
         addIdeaSmsPacksContents();
         addOtherPacksContents();
-    }
+    }*/
 
-    public void addIdeaTopupPacksContents() {
+    /*public void addIdeaTopupPacksContents() {
         dbReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork() + "/Details/Topup");
         Map<String, PackDetailsVariables> map = new HashMap<>();
         map.put("10", new PackDetailsVariables("10", "Lifetime", "7.42 Talktime", ""));
@@ -155,7 +164,7 @@ public class DatabaseInitialization {
         map.put("227", new PackDetailsVariables("227", "28 days", "", "2G/4G Data: 1.4 GB / Day; Local, STD & Roaming Calls: Unlimited; All SMS (100 sms/day): 2800 SMS; Not for Commercial Activity; Unlimited Dialer Tone; Missed Call Alert"));
         DatabaseMethods.addToDatabase(dbReference, map);
     }
-
+*/
     public List<String> addIdeaTabs() {
         Log.d("yes", "addIdeaTabs: " + preferenceConfig.getCurrentNetwork() + DatabaseConstants.TAB_LISTS);
         dbReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork() + DatabaseConstants.TAB_LISTS);
@@ -172,6 +181,5 @@ public class DatabaseInitialization {
             DatabaseMethods.addToDatabase(dbReference, DatabaseConstants.IDEA_TAB_NAME_KEY, each);
         return list;
     }
-*/
 
 }

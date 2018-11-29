@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "875251012471",
-    "firebase_url": "https://ireffduplicate.firebaseio.com",
-    "project_id": "ireffduplicate",
-    "storage_bucket": "ireffduplicate.appspot.com"
+    "project_number": "227036144613",
+    "firebase_url": "https://ifsurya-81d28.firebaseio.com",
+    "project_id": "ifsurya-81d28",
+    "storage_bucket": "ifsurya-81d28.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:875251012471:android:e0bd22afe5ad1426",
+        "mobilesdk_app_id": "1:227036144613:android:017076644fc06153",
         "android_client_info": {
-          "package_name": "com.example.ray.ireffduplicate"
+          "package_name": "com.example.ray.ifduplicate"
         }
       },
       "oauth_client": [
         {
-          "client_id": "875251012471-8bjkn8t4qlp8u2la5aodbub8mljjjiqk.apps.googleusercontent.com",
+          "client_id": "227036144613-7falh27oanjdhi00hl6ug02gcvimt87s.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.ray.ireffduplicate",
+            "package_name": "com.example.ray.ifduplicate",
             "certificate_hash": "f6e2603742b97cbee8d4c8fd80205669c2e0e684"
           }
         },
         {
-          "client_id": "875251012471-rnmbglpcra72qr8p486icsft9kepj7d7.apps.googleusercontent.com",
+          "client_id": "227036144613-72aeql03l9a5hlv6n4adimha63nhi2f5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBz9aNgSWJk4Bmg0K91aHWJ1RYZip2SJtg"
+          "current_key": "AIzaSyB_4XupTCERP1atVn3690NGuqWhBwTg7Fk"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "875251012471-rnmbglpcra72qr8p486icsft9kepj7d7.apps.googleusercontent.com",
+              "client_id": "227036144613-72aeql03l9a5hlv6n4adimha63nhi2f5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

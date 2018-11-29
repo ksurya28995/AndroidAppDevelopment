@@ -7,7 +7,7 @@ public class PackDetailsVariables {
     private String talktime;
     private String message;
 
-   /* public PackDetailsVariables(String price, String validity, String talktime, String message){
+  /*  public PackDetailsVariables(String price, String validity, String talktime, String message){
         this.price = price;
         this.validity = validity;
         this.talktime = talktime;

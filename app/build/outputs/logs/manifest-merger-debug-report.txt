@@ -101,7 +101,7 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Us
 	android:label
 		ADDED from C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\AndroidManifest.xml:9:9-56
+		ADDED from C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\AndroidManifest.xml:9:9-49
 	android:icon
 		ADDED from C:\Users\Ray\AndroidStudioProjects\IreffDuplicate\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
