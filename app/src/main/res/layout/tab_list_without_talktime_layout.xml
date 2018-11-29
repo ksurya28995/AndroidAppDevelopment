@@ -119,17 +119,21 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="60dp">
 
             <TextView
                 android:id="@+id/message"
                 android:padding="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:text="2G/4G Data: 200Mb; Local and STD Calls @ 0.3/min; Talktime: Rs. 100.0"
+                android:layout_marginRight="15dp"
+                android:text="2G/4G Data: 200Mb; Locazxcxzcxdsdfsfsfsdfscxczczxczxczczxczczczczczczxczczxczxczxczczczczczczcczczczxczxczxczczxcxzczxczxczxczxczl and STD Calls @ 0.3/min; Talktime: Rs. 100.0"
                 android:textColor="@color/colorBlack"
-                android:textSize="12dp" />
+                android:textSize="12.2dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginBottom="5dp"/>
         </LinearLayout>
     </LinearLayout>
 

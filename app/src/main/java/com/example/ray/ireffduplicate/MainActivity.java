@@ -1,66 +1,33 @@
 package com.example.ray.ireffduplicate;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import com.example.ray.ireffduplicate.Database.DatabaseMethods;
-import com.example.ray.ireffduplicate.Database.DatabaseConstants;
-import com.example.ray.ireffduplicate.Database.initializeDB.DatabaseInitialization;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-import java.util.List;
+import android.text.TextUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentManager fragmentManager;
-    private List<String> tabsList = new ArrayList<>();
-    private DatabaseReference databaseReference;
-    private SharedPreferenceConfig preferenceConfig;
+    private static int SPLASH_TIMEOUT = 7000;
+    private ImageView imageView;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
-        //toolbar inflation
-        fragmentManager = getSupportFragmentManager();
-        if (findViewById(R.id.toolbarContainer) != null) {
-            fragmentManager.beginTransaction().add(R.id.toolbarContainer, new CustomToolbar(), "toolbar").commit();
-        }
-
-        //Database Initializtion
-        /*DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
-        dbInitialize.addIdeaTabs();
-        dbInitialize.addTabContentsData();*/
-
-
-        databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        imageView = findViewById(R.id.splashImage);
+        textView = findViewById(R.id.Name);
+        imageView.setImageResource(R.drawable.splash_pic);
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                tabsList = DatabaseMethods.getTablist(dataSnapshot);
-                tabsInflate();
+            public void run() {
+                Intent homeIntent = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+                finish();
             }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
+        }, SPLASH_TIMEOUT);
     }
-
-    public void tabsInflate(){
-        if (findViewById(R.id.mainFragContainer) != null) {
-            TabViewPage tabViewPage = new TabViewPage();
-            tabViewPage.TabViewPage(getSupportFragmentManager(), tabsList);
-            fragmentManager.beginTransaction().add(R.id.mainFragContainer, tabViewPage, "Tabs").commit();
-        }
-    }
-
 }
-
