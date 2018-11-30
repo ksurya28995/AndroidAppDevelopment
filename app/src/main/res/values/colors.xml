@@ -13,7 +13,7 @@
     <color name="colorDarkGrey">#A5A5A5</color>
     <color name="colorButtonBlue">#1A55DE</color>
     <color name="colorLayerBlue">#C4D4FA</color>
-
+    <color name="colorLayerYellow">#FFFF00</color>
 
 
 </resources>
