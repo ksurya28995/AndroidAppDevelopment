@@ -10,11 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:padding="15dp">
+        android:padding="10dp">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp">
 
@@ -29,57 +28,133 @@
                 android:src="@drawable/ic_settings"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.692" />
 
-            <Button
-                android:id="@+id/signInButton"
-                android:layout_width="124dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorButtonBlue"
-                android:elevation="3dp"
-                android:text="SIGN IN"
-                android:textColor="@color/colorWhite"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                app:layout_constraintCircleRadius="5dp" />
+            <android.support.v7.widget.CardView
+                android:layout_width="75dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/colorButtonBlue"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="3dp"
+                app:contentPadding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/signInButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorButtonBlue"
+                    android:gravity="center"
+                    android:text="SIGN IN"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:layout_constraintCircleRadius="5dp" />
+
+            </android.support.v7.widget.CardView>
 
         </android.support.constraint.ConstraintLayout>
 
     </LinearLayout>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:background="@color/colorRed"
-       android:orientation="horizontal"
-       >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:padding="10dp">
 
-       <android.support.v7.widget.CardView
-           android:layout_width="126dp"
-           android:layout_marginTop="10dp"
-           android:layout_marginBottom="10dp"
-           android:layout_marginLeft="20dp"
-           app:cardCornerRadius="5dp"
-           android:layout_height="match_parent"
-           app:cardBackgroundColor="@color/colorLayerBlue"
-           tools:layout_editor_absoluteX="8dp"
-           tools:layout_editor_absoluteY="47dp">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="83dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/colorLayerBlue"
+                app:cardCornerRadius="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-       </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-       <android.support.v7.widget.CardView
-           android:layout_width="match_parent"
-           android:layout_marginTop="10dp"
-           android:layout_marginRight="20dp"
-           android:layout_marginBottom="10dp"
-           android:layout_marginLeft="10dp"
-           app:cardCornerRadius="5dp"
-           android:layout_height="match_parent"
-           app:cardBackgroundColor="@color/colorLayerBlue"
-           tools:layout_editor_absoluteX="8dp"
-           tools:layout_editor_absoluteY="47dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="18dp"
+                        android:src="@drawable/ic_rewards"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-   </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Earn Rewards"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="62dp" />
 
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="124dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/colorLayerBlue"
+                app:cardCornerRadius="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="18dp"
+                        android:src="@drawable/ic_notifications"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Notifications"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="62dp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </LinearLayout>

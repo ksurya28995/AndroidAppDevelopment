@@ -493,8 +493,10 @@ color cardview_shadow_start_color
 color colorAccent
 color colorBlack
 color colorBlue
+color colorButtonBlue
 color colorDarkGrey
 color colorGrey
+color colorLayerBlue
 color colorPrimary
 color colorPrimaryDark
 color colorRed
@@ -569,7 +571,6 @@ color switch_thumb_normal_material_light
 color tabsList
 color tooltip_background_dark
 color tooltip_background_light
-color x
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -676,6 +677,7 @@ dimen design_navigation_icon_padding
 dimen design_navigation_icon_size
 dimen design_navigation_max_width
 dimen design_navigation_padding_bottom
+dimen design_navigation_padding_top_default
 dimen design_navigation_separator_vertical_padding
 dimen design_snackbar_action_inline_max_width
 dimen design_snackbar_background_corner_radius
@@ -707,6 +709,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen navigation_separator_vertical_padding
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -852,6 +855,9 @@ drawable ic_main_menu
 drawable ic_menu_search
 drawable ic_my_recharges
 drawable ic_network_expand
+drawable ic_notifications
+drawable ic_rewards
+drawable ic_settings
 drawable ic_ussd_codes
 drawable navigation_empty_icon
 drawable notification_action_background
@@ -912,6 +918,8 @@ id blocking
 id bottom
 id buttonPanel
 id cancel_action
+id cardView
+id cardView2
 id center
 id center_horizontal
 id center_vertical
@@ -939,7 +947,6 @@ id direct
 id disableHome
 id drawer
 id drawerButton
-id dthPlans
 id edit_query
 id end
 id end_padder
@@ -982,7 +989,7 @@ id message
 id middle
 id mini
 id multiply
-id myRecharges
+id navigationHeaderSetting
 id navigationView
 id navigation_header_container
 id networkName
@@ -1034,6 +1041,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signInButton
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1081,7 +1089,6 @@ id typelist
 id uniform
 id up
 id useLogo
-id ussdCodes
 id validity
 id viewPager
 id view_offset_helper
@@ -1146,6 +1153,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_network_type_list
 layout fragment_tab_view_page
+layout navigation_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1168,7 +1176,6 @@ layout support_simple_spinner_dropdown_item
 layout tab_list_with_talktime_layout
 layout tab_list_without_talktime_layout
 layout tablist_layout
-menu navigation_list
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -1412,6 +1419,7 @@ style Base_Widget_Design_TabLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style NavDrawerTextStyle
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_ThemeOverlay_AppCompat
