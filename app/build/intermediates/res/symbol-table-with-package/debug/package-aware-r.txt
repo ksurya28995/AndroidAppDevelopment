@@ -848,6 +848,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_about_us
 drawable ic_app_icon
+drawable ic_arrow_back
 drawable ic_dth_plans
 drawable ic_help
 drawable ic_ireff_launcher
@@ -862,6 +863,7 @@ drawable ic_rewards
 drawable ic_settings
 drawable ic_share
 drawable ic_ussd_codes
+drawable idea_logo
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -879,6 +881,7 @@ drawable recharge_offers_logo
 drawable splash_pic
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable vodafone_logo
 id ALT
 id CTRL
 id FUNCTION
@@ -972,6 +975,7 @@ id homeAsUp
 id icon
 id icon_group
 id icon_only
+id ideaBtn
 id ifRoom
 id image
 id info
@@ -997,6 +1001,7 @@ id navigationHeaderSetting
 id navigationView
 id navigation_header_container
 id networkName
+id networkSelectionBtn
 id networkTypeList
 id never
 id none
@@ -1097,6 +1102,7 @@ id validity
 id viewPager
 id view_offset_helper
 id visible
+id vodafoneBtn
 id wide
 id withText
 id wrap
@@ -1141,6 +1147,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_home
 layout activity_main
+layout activity_network_selection
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

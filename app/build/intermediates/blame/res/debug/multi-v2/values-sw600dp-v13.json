@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\RechargeOffers\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\cbf31ad60ed0770f7c960dbce56b7994\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",

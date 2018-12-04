@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
+            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\RechargeOffers\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\1cb59c62356d26ebd5d08691abe3e71f\\res\\values-da\\values-da.xml",

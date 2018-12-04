@@ -64,7 +64,7 @@ public class TabContents extends Fragment {
                 layoutManager = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(layoutManager);
                 recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-                if (talktime!=null && !talktime.equals("")) {
+                if (talktime != null && !talktime.equals("")) {
                     recyclerAdapterWithTalktime = new RecyclerViewAdapter_WithTalktime(tabContentList);
                     recyclerView.setAdapter(recyclerAdapterWithTalktime);
                 } else {

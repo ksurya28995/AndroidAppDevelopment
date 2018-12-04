@@ -15,7 +15,7 @@ public class SharedPreferenceConfig {
     }
 
     public String getCurrentNetwork() {
-        String defaultNetwork = "/Idea/Tamilnadu";
+        String defaultNetwork = "/Idea";
         defaultNetwork = preferences.getString(context.getResources().getString(R.string.currentNetworkPreference), defaultNetwork);
         return defaultNetwork;
     }

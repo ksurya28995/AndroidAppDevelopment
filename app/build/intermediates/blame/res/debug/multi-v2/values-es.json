@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
+            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\RechargeOffers\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es\\values-es.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-12.0.1.aar\\09861f80c1a36c8199a8718dc415c2a9\\res\\values-es\\values.xml",

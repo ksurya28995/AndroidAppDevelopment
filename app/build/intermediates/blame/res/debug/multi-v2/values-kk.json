@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\IreffDuplicate\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
+            "outputFile": "C:\\Users\\Ray\\AndroidStudioProjects\\RechargeOffers\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Ray\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.0.1.aar\\0d5d56dbb34b7de91e332e4f7f462c6a\\res\\values-kk\\values.xml",
