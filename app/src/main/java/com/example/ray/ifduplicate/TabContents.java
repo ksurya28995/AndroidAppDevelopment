@@ -26,31 +26,31 @@ import java.util.List;
 
 public class TabContents extends Fragment {
 
-    private RecyclerViewAdapter_WithTalktime recyclerAdapterWithTalktime;
-    private RecyclerViewAdapter_WithoutTalktime recyclerAdapterWithoutTalktime;
+    public static RecyclerViewAdapter_WithTalktime recyclerAdapterWithTalktime;
+    public static RecyclerViewAdapter_WithoutTalktime recyclerAdapterWithoutTalktime;
     private RecyclerView recyclerView;
     private String currentTab;
     private SharedPreferenceConfig preferenceConfig;
     private RecyclerView.LayoutManager layoutManager;
     private DatabaseReference databaseReference;
-    List<PackDetailsVariables> tabContentList = new ArrayList<>();
+    private final List<PackDetailsVariables> tabContentList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tablist_layout, container, false);
+
         preferenceConfig = new SharedPreferenceConfig(getContext());
         Bundle bundle = getArguments();
         currentTab = bundle.getString("currentTab");
-        Log.d("nowTab", "onCreateView: " + currentTab);
         recyclerView = view.findViewById(R.id.recyclerContainer);
-        Log.d("currNet", "onCreateView: " + preferenceConfig.getCurrentNetwork());
         databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String talktime = null;
                 DataSnapshot ds = dataSnapshot.child(currentTab);
+                tabContentList.clear();
                 for (DataSnapshot each : ds.getChildren()) {
                     PackDetailsVariables pkVariables = new PackDetailsVariables();
                     pkVariables.setPrice(each.getValue(PackDetailsVariables.class).getPrice());
@@ -59,7 +59,6 @@ public class TabContents extends Fragment {
                     pkVariables.setMessage(each.getValue(PackDetailsVariables.class).getMessage());
                     tabContentList.add(pkVariables);
                     talktime = pkVariables.getTalktime();
-                    Log.d("nowdetails", "onDataChange: " + pkVariables.getTalktime());
                 }
                 layoutManager = new LinearLayoutManager(getContext());
                 recyclerView.setLayoutManager(layoutManager);
@@ -71,7 +70,6 @@ public class TabContents extends Fragment {
                     recyclerAdapterWithoutTalktime = new RecyclerViewAdapter_WithoutTalktime(tabContentList);
                     recyclerView.setAdapter(recyclerAdapterWithoutTalktime);
                 }
-                recyclerView.setHasFixedSize(true);
             }
 
             @Override

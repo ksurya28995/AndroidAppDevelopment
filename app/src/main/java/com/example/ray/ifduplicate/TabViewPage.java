@@ -19,7 +19,7 @@ public class TabViewPage extends Fragment {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private ViewPageAdapter viewPageAdapter;
+    public static ViewPageAdapter viewPageAdapter;
     private FragmentManager fragmentManager;
     private List<String>tabsList;
 

@@ -17,21 +17,12 @@ public class DatabaseMethods {
     public static List<String> getTablist(DataSnapshot dataSnapshot) {
         IdeaTabVariables dbVariables = new IdeaTabVariables();
         DataSnapshot dsTabList = dataSnapshot.child("/TabLists");
+        tabsList.clear();
         for (DataSnapshot ds : dsTabList.getChildren()){
             dbVariables.setTabName(ds.getValue(IdeaTabVariables.class).getTabName());
             Log.d("DB", "showTabListData: " + dbVariables.getTabName());
             tabsList.add(dbVariables.getTabName());
         }
         return tabsList;
-    }
-
-    public static void addToDatabase(DatabaseReference databaseReference, String key, String value) {
-        Map<String, String> map = new HashMap<>();
-        map.put(key, value);
-        databaseReference.push().setValue(map);
-    }
-
-    public static void addToDatabase(DatabaseReference databaseReference, Map<String, PackDetailsVariables>map) {
-        databaseReference.setValue(map);
     }
 }

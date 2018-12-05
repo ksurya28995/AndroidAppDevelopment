@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIMEOUT = 10;
+    private static int SPLASH_TIMEOUT = 5000;
     private ImageView imageView;
     private TextView textView;
 

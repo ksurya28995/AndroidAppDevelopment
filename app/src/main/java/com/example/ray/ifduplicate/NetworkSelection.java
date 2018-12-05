@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class NetworkSelection extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton idea, vodafone;
+    private ImageButton idea, vodafone, operatorChangebackBtn;
     private String currentNetwork;
 
     @Override
@@ -18,8 +18,10 @@ public class NetworkSelection extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_network_selection);
         idea = findViewById(R.id.ideaBtn);
         vodafone = findViewById(R.id.vodafoneBtn);
+        operatorChangebackBtn = findViewById(R.id.operatorChangebackBtn);
         idea.setOnClickListener(this);
         vodafone.setOnClickListener(this);
+        operatorChangebackBtn.setOnClickListener(this);
     }
 
     @Override
@@ -30,6 +32,9 @@ public class NetworkSelection extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.vodafoneBtn:
                 currentNetwork = "/Vodafone";
+                break;
+            case R.id.operatorChangebackBtn:
+                finish();
                 break;
         }
         Intent resultIntent = new Intent();

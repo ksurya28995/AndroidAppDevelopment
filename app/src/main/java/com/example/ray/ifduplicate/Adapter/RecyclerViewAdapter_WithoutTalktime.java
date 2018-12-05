@@ -12,6 +12,8 @@ import com.example.ray.ifduplicate.R;
 
 import java.util.List;
 
+import static android.support.v4.view.PagerAdapter.POSITION_NONE;
+
 public class RecyclerViewAdapter_WithoutTalktime extends RecyclerView.Adapter<RecyclerViewAdapter_WithoutTalktime.myViewHolder> {
     private List<PackDetailsVariables> list;
 
@@ -50,4 +52,5 @@ public class RecyclerViewAdapter_WithoutTalktime extends RecyclerView.Adapter<Re
             message = view.findViewById(R.id.message);
         }
     }
+
 }

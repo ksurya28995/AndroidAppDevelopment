@@ -26,7 +26,6 @@ public class ViewPageAdapter extends FragmentPagerAdapter {
         TabContents tabContents = new TabContents();
         Bundle bundle = new Bundle();
         bundle.putString("currentTab", "/Details/" + tabLists.get(position));
-        Log.d("eachTab", "getItem: " + tabLists.get(position));
         tabContents.setArguments(bundle);
         return tabContents;
     }
