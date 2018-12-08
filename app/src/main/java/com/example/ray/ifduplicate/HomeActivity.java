@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private static List<String> tabsList = new ArrayList<>();
     private HashMap<String, PackDetailsVariables> packsData = new HashMap<>();
     private DatabaseReference databaseReference;
-    private SharedPreferenceConfig preferenceConfig;
+    public static SharedPreferenceConfig preferenceConfig;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private ImageButton drawerButton, networkSelectionBtn;
