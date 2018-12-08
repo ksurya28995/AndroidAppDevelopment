@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.ray.ifduplicate.Database.DatabaseMethods;
+import com.example.ray.ifduplicate.Database.PackDetailsVariables;
 import com.example.ray.ifduplicate.Database.initializeDB.DatabaseInitialization;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,12 +28,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private FragmentManager fragmentManager;
-    private List<String> tabsList = new ArrayList<>();
+    private static FragmentManager fragmentManager;
+    private static List<String> tabsList = new ArrayList<>();
+    private HashMap<String, PackDetailsVariables> packsData = new HashMap<>();
     private DatabaseReference databaseReference;
     private SharedPreferenceConfig preferenceConfig;
     private DrawerLayout drawerLayout;
@@ -41,26 +46,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private int messageCode = 01;
     private TextView networkName;
     private String currentNetwork;
+    private static TabViewPage tabViewPage = new TabViewPage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        //Shared preferences Initialization
         preferenceConfig = new SharedPreferenceConfig(getApplicationContext());
-        /*
-        //Database Initializtion
-        DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
 
+        //Database Initializtion
+        /*DatabaseInitialization dbInitialize = new DatabaseInitialization(getApplicationContext());
         preferenceConfig.setCurrentNetwork("/Idea");
         dbInitialize.addIdeaTabs();
-        dbInitialize.addIdeaTabContentsData();
-
+        dbInitialize.addIdeaPacksContents();
         preferenceConfig.setCurrentNetwork("/Vodafone");
         dbInitialize.addVodafoneTabs();
-        dbInitialize.addVodafoneTabContentsData();
-        */
+        dbInitialize.addVodafonePacksContents();*/
 
         networkName = findViewById(R.id.networkName);
         drawerLayout = findViewById(R.id.drawer);
@@ -73,22 +75,21 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         networkName.setText(preferenceConfig.getCurrentNetwork().replaceAll("/", ""));
         drawerButton.setOnClickListener(this);
         networkSelectionBtn.setOnClickListener(this);
-
         loadMainPage();
     }
 
     public void tabsInflation() {
         if (findViewById(R.id.mainFragContainer) != null) {
-            TabViewPage tabViewPage = new TabViewPage();
-            tabViewPage.TabViewPage(getSupportFragmentManager(), tabsList);
-            fragmentManager.beginTransaction().add(R.id.mainFragContainer, tabViewPage, "Tabs").addToBackStack(null).commit();
+            tabViewPage = new TabViewPage();
+            tabViewPage.loadTabViewPage(getSupportFragmentManager(), tabsList);
+            fragmentManager.beginTransaction().add(R.id.mainFragContainer, tabViewPage, "Tabs").commit();
         }
     }
 
     public void tabsReinflation() {
         if (findViewById(R.id.mainFragContainer) != null) {
-            TabViewPage tabViewPage = new TabViewPage();
-            tabViewPage.TabViewPage(getSupportFragmentManager(), tabsList);
+            tabViewPage = new TabViewPage();
+            tabViewPage.loadTabViewPage(getSupportFragmentManager(), tabsList);
             fragmentManager.beginTransaction().replace(R.id.mainFragContainer, tabViewPage, "Tabs").commit();
         }
     }
@@ -104,7 +105,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == messageCode) {
@@ -117,7 +117,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }
-        Log.d("newNetworkSelected", "network: " + preferenceConfig.getCurrentNetwork());
     }
 
     public void loadMainPage() {
@@ -126,6 +125,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 tabsList = DatabaseMethods.getTablist(dataSnapshot);
+                packsData = DatabaseMethods.getTabsContentDatalist(dataSnapshot);
                 tabsInflation();
             }
 
@@ -141,6 +141,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 tabsList = DatabaseMethods.getTablist(dataSnapshot);
+                packsData = DatabaseMethods.getTabsContentDatalist(dataSnapshot);
                 TabViewPage.viewPageAdapter.notifyDataSetChanged();
                 TabContents.recyclerAdapterWithoutTalktime.notifyDataSetChanged();
                 TabContents.recyclerAdapterWithTalktime.notifyDataSetChanged();

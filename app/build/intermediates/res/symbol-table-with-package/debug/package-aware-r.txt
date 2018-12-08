@@ -497,7 +497,9 @@ color colorButtonBlue
 color colorDarkGrey
 color colorGrey
 color colorLayerBlue
+color colorLayerGrey
 color colorLayerYellow
+color colorLightrey
 color colorPrimary
 color colorPrimaryDark
 color colorRed
@@ -848,7 +850,8 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_about_us
 drawable ic_app_icon
-drawable ic_arrow_back
+drawable ic_arrow_back_black
+drawable ic_arrow_back_white
 drawable ic_dth_plans
 drawable ic_help
 drawable ic_ireff_launcher
@@ -1011,6 +1014,11 @@ id notification_main_column
 id notification_main_column_container
 id operatorChangebackBtn
 id packContainer
+id packDetailsBackBtn
+id packDetailsMessage
+id packDetailsPrice
+id packDetailsTalktime
+id packDetailsValidity
 id packed
 id parallax
 id parent
@@ -1149,6 +1157,8 @@ layout abc_tooltip
 layout activity_home
 layout activity_main
 layout activity_network_selection
+layout activity_pack_details_with_talktime_layout
+layout activity_pack_details_without_talktime_layout
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

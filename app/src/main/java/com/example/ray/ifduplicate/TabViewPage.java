@@ -16,14 +16,13 @@ import java.util.List;
 
 public class TabViewPage extends Fragment {
 
-
     private ViewPager viewPager;
     private TabLayout tabLayout;
     public static ViewPageAdapter viewPageAdapter;
     private FragmentManager fragmentManager;
-    private List<String>tabsList;
+    private List<String> tabsList;
 
-    public void TabViewPage(FragmentManager fm, List<String>tabsList) {
+    public void loadTabViewPage(FragmentManager fm, List<String> tabsList) {
         this.tabsList = tabsList;
         fragmentManager = fm;
     }
@@ -31,7 +30,6 @@ public class TabViewPage extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab_view_page, container, false);
         viewPageAdapter = new ViewPageAdapter(fragmentManager, tabsList);
         viewPager = view.findViewById(R.id.viewPager);
@@ -40,5 +38,4 @@ public class TabViewPage extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         return view;
     }
-
 }

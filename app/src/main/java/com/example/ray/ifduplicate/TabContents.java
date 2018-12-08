@@ -14,6 +14,8 @@ import android.view.ViewGroup;
 
 import com.example.ray.ifduplicate.Adapter.RecyclerViewAdapter_WithTalktime;
 import com.example.ray.ifduplicate.Adapter.RecyclerViewAdapter_WithoutTalktime;
+import com.example.ray.ifduplicate.Adapter.ViewPageAdapter;
+import com.example.ray.ifduplicate.Database.DatabaseMethods;
 import com.example.ray.ifduplicate.Database.PackDetailsVariables;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,62 +23,53 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.sql.BatchUpdateException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class TabContents extends Fragment {
 
-    public static RecyclerViewAdapter_WithTalktime recyclerAdapterWithTalktime;
-    public static RecyclerViewAdapter_WithoutTalktime recyclerAdapterWithoutTalktime;
-    private RecyclerView recyclerView;
-    private String currentTab;
-    private SharedPreferenceConfig preferenceConfig;
+    public static RecyclerViewAdapter_WithTalktime recyclerAdapterWithTalktime = new RecyclerViewAdapter_WithTalktime(null);
+    public static RecyclerViewAdapter_WithoutTalktime recyclerAdapterWithoutTalktime = new RecyclerViewAdapter_WithoutTalktime(null );
+    private List<PackDetailsVariables> tabDataArray = new ArrayList<>();
+    public static RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
-    private DatabaseReference databaseReference;
-    private final List<PackDetailsVariables> tabContentList = new ArrayList<>();
+    private Bundle bundle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tablist_layout, container, false);
-
-        preferenceConfig = new SharedPreferenceConfig(getContext());
-        Bundle bundle = getArguments();
+        bundle = null;
+        bundle = getArguments();
+        String currentTab = null;
         currentTab = bundle.getString("currentTab");
+        tabDataArray = null;
+        tabDataArray = DatabaseMethods.loadPacksData(currentTab);
         recyclerView = view.findViewById(R.id.recyclerContainer);
-        databaseReference = FirebaseDatabase.getInstance().getReference(preferenceConfig.getCurrentNetwork());
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String talktime = null;
-                DataSnapshot ds = dataSnapshot.child(currentTab);
-                tabContentList.clear();
-                for (DataSnapshot each : ds.getChildren()) {
-                    PackDetailsVariables pkVariables = new PackDetailsVariables();
-                    pkVariables.setPrice(each.getValue(PackDetailsVariables.class).getPrice());
-                    pkVariables.setTalktime(each.getValue(PackDetailsVariables.class).getTalktime());
-                    pkVariables.setValidity(each.getValue(PackDetailsVariables.class).getValidity());
-                    pkVariables.setMessage(each.getValue(PackDetailsVariables.class).getMessage());
-                    tabContentList.add(pkVariables);
-                    talktime = pkVariables.getTalktime();
-                }
-                layoutManager = new LinearLayoutManager(getContext());
-                recyclerView.setLayoutManager(layoutManager);
-                recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-                if (talktime != null && !talktime.equals("")) {
-                    recyclerAdapterWithTalktime = new RecyclerViewAdapter_WithTalktime(tabContentList);
-                    recyclerView.setAdapter(recyclerAdapterWithTalktime);
-                } else {
-                    recyclerAdapterWithoutTalktime = new RecyclerViewAdapter_WithoutTalktime(tabContentList);
-                    recyclerView.setAdapter(recyclerAdapterWithoutTalktime);
-                }
-            }
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
+        if (currentTab.contains("Home")) {
+
+        } else if (currentTab.contains("Topup")) {
+            recyclerAdapterWithTalktime = null;
+            recyclerAdapterWithTalktime = new RecyclerViewAdapter_WithTalktime(tabDataArray);
+            recyclerView.setAdapter(null);
+            recyclerView.setAdapter(recyclerAdapterWithTalktime);
+        } else {
+            recyclerAdapterWithoutTalktime = null;
+            recyclerAdapterWithoutTalktime = new RecyclerViewAdapter_WithoutTalktime(tabDataArray);
+            recyclerView.setAdapter(null);
+            recyclerView.setAdapter(recyclerAdapterWithoutTalktime);
+        }
         return view;
     }
 
 }
+

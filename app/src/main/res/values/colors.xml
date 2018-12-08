@@ -10,10 +10,12 @@
     <color name="tabsList">#A0A0A0</color>
     <color name="colorBlue">#4390FA</color>
     <color name="colorGrey">#9E9E9E</color>
-    <color name="colorDarkGrey">#A5A5A5</color>
+    <color name="colorDarkGrey">#8A8A8A</color>
+    <color name="colorLightrey">#C3C3C3</color>
     <color name="colorButtonBlue">#1A55DE</color>
     <color name="colorLayerBlue">#C4D4FA</color>
     <color name="colorLayerYellow">#FFFF00</color>
+    <color name="colorLayerGrey">#F0F0F0</color>
 
 
 </resources>
