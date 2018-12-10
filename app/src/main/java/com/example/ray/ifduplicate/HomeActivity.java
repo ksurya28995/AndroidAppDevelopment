@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public static SharedPreferenceConfig preferenceConfig;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    private ImageButton drawerButton, networkSelectionBtn;
+    private ImageButton drawerButton, networkSelectionBtn, searchBtn;
     private int messageCode = 01;
     private TextView networkName;
     private String currentNetwork;
@@ -68,12 +68,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigationView);
         drawerButton = findViewById(R.id.drawerButton);
+        searchBtn = findViewById(R.id.searchBtn);
         fragmentManager = getSupportFragmentManager();
         networkSelectionBtn = findViewById(R.id.networkSelectionBtn);
         currentNetwork = preferenceConfig.getCurrentNetwork();
 
         networkName.setText(preferenceConfig.getCurrentNetwork().replaceAll("/", ""));
         drawerButton.setOnClickListener(this);
+        searchBtn.setOnClickListener(this);
         networkSelectionBtn.setOnClickListener(this);
         loadMainPage();
     }
@@ -102,6 +104,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.networkSelectionBtn:
                 startActivityForResult(new Intent(this, NetworkSelection.class), messageCode);
+                break;
+            case R.id.searchBtn:
+                tabViewPage.loadTabViewPage(getSupportFragmentManager(), tabsList);
+                startActivity(new Intent(this, SearchFunctionality.class));
                 break;
         }
     }
@@ -153,5 +159,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+
 }
 

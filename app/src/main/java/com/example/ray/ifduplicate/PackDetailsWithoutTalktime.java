@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class PackDetailsWithoutTalktime extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView price, validity, message, category;
+    private TextView price, validity, message, category, networkName;
     private ImageButton packDetailsBackBtn;
 
     @Override
@@ -20,17 +20,20 @@ public class PackDetailsWithoutTalktime extends AppCompatActivity implements Vie
         validity = findViewById(R.id.packDetailsValidity);
         //category = findViewById(R.id.packDetailsCategory);
         message = findViewById(R.id.packDetailsMessage);
+        networkName = findViewById(R.id.networkName);
         packDetailsBackBtn = findViewById(R.id.packDetailsBackBtn);
         packDetailsBackBtn.setOnClickListener(this);
 
         String messageValue = getIntent().getStringExtra("message").replaceAll("; ", "\n\n");
         String priceValue = getIntent().getStringExtra("price");
         String validityValue = getIntent().getStringExtra("validity");
+        String networkNameVal = HomeActivity.preferenceConfig.getCurrentNetwork().replaceAll("/", "");
         //String categoryValue = getIntent().getStringExtra("category");
 
         price.setText(priceValue);
         message.setText(messageValue);
         validity.setText(validityValue);
+        networkName.setText(networkNameVal);
     }
 
     @Override

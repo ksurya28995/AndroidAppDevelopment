@@ -90,7 +90,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/searchBar"
+                        android:id="@+id/searchBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
@@ -100,7 +100,7 @@
                         android:layout_marginBottom="10dp"
                         android:background="@color/colorRed"
                         android:gravity="right"
-                        android:src="@drawable/ic_menu_search"
+                        android:src="@drawable/ic_menu_search_white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

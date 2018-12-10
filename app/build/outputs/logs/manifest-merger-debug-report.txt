@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\cbf31ad60ed0770f7c960dbce56b7994\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\1e58fb281fb39f0018ac291242132103\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\e1ba0945425213fadf1d804d62f09820\AndroidManifest.xml:2:1-11:12
@@ -41,25 +41,25 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\Ray\.gradle\caches
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\576d1abbaf1c73a0420160512b91cf57\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\4eb115e81e1004f0d0c3c78abce9b595\AndroidManifest.xml:2:1-9:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\6b572ce6991116c5e8047d7ba693a342\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:5:5-23:19
+ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:5:5-24:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\e1ba0945425213fadf1d804d62f09820\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\e1ba0945425213fadf1d804d62f09820\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-messaging:12.0.1] C:\Users\Ray\.gradle\caches\transforms-1\files-1.1\firebase-messaging-12.0.1.aar\09861f80c1a36c8199a8718dc415c2a9\AndroidManifest.xml:22:5-35:19
@@ -131,13 +131,17 @@ ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:20:19-51
 activity#com.example.ray.ifduplicate.PackDetailsWithoutTalktime
-ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:21:9-73
+ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:21:9-64
 	android:name
 		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:21:19-61
 activity#com.example.ray.ifduplicate.PackDetailsWithTalktime
-ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:22:9-70
+ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:22:9-61
 	android:name
 		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:22:19-58
+activity#com.example.ray.ifduplicate.SearchFunctionality
+ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:23:9-66
+	android:name
+		ADDED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml:23:19-54
 uses-sdk
 INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Ray\AndroidStudioProjects\RechargeOffers\app\src\main\AndroidManifest.xml

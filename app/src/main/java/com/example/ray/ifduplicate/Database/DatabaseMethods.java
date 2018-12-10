@@ -67,6 +67,17 @@ public class DatabaseMethods {
             }
         }
         return eachTabData;
+    }
+
+    public static List<PackDetailsVariables> loadSearchResultData(String searchText){
+        eachTabData.clear();
+        searchText = searchText.toLowerCase();
+        for (LinkedHashMap.Entry<String, PackDetailsVariables> each : packsData.entrySet()) {
+            if (each.getValue().getMessage().toLowerCase().contains(searchText) || each.getValue().getPrice().toLowerCase().contains(searchText)) {
+                eachTabData.add(each.getValue());
+            }
+        }
+        return eachTabData;
 
     }
 

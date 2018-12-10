@@ -34,6 +34,7 @@
         <activity android:name="com.example.ray.ifduplicate.NetworkSelection" />
         <activity android:name="com.example.ray.ifduplicate.PackDetailsWithoutTalktime" />
         <activity android:name="com.example.ray.ifduplicate.PackDetailsWithTalktime" />
+        <activity android:name="com.example.ray.ifduplicate.SearchFunctionality" />
         <!--
              FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

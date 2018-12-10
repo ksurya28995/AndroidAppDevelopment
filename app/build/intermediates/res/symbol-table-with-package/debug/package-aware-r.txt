@@ -858,7 +858,8 @@ drawable ic_ireff_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_main_menu
-drawable ic_menu_search
+drawable ic_menu_search_black
+drawable ic_menu_search_white
 drawable ic_my_recharges
 drawable ic_network_expand
 drawable ic_notifications
@@ -892,6 +893,7 @@ id META
 id Name
 id SHIFT
 id SYM
+id SearchResultsFragmentContainer
 id Text
 id TextMessage
 id action0
@@ -1031,6 +1033,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recyclerContainer
+id recyclerSearchResultContainer
 id right
 id right_icon
 id right_side
@@ -1043,7 +1046,11 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchBar
+id searchBackBtn
+id searchBtn
+id searchContentIcon
+id searchText
+id searchTitle
 id search_badge
 id search_bar
 id search_button
@@ -1078,7 +1085,6 @@ id stateName
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
-id tabListLayout
 id tabMode
 id tabs
 id tag_transition_group
@@ -1159,6 +1165,7 @@ layout activity_main
 layout activity_network_selection
 layout activity_pack_details_with_talktime_layout
 layout activity_pack_details_without_talktime_layout
+layout activity_search_functionality
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1174,6 +1181,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_network_type_list
+layout fragment_search_result
 layout fragment_tab_view_page
 layout navigation_header
 layout notification_action
